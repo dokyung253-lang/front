@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+ <!-- 글머리 -->
+    <ol> <!--order list : 메뉴, 제품 항목 등등 순차적인 아이템 배치-->
+        <li> <!-- list item-->
+            1일차
+        </li>
+        <li> 2일차 </li>
+    </ol>
+    <ul> <!-- un order list : ol(숫자)과 ul(기호) 글머리 차이 -->
+        <li> 1일차 </li>
+        <li> 2일차 </li>
+    </ul>
+
+<!-- a href는 하이퍼링크 -->
+    <a href="https://naver.com"> 여기 클릭 </a> <br />
+    <a href="exam1.hrml"> 이전 실습 페이지로 </a> <br />
+    <a href="tel:010-0000-0000"> 전화 걸기(모바일환경) </a> <br />
+
+    <!-- 상대 경로(현재위치(./)경로) (동네 설명) vs 절대 경로(고정위치경로) (전체 주소)-->
+    <li> 상대경로 </li> 
+    <a href="./exam1.html"> 현위치 : ./, 생략 가능 </a>
+    <a href="../test.html"> 현위치 기준에서 상위폴더 1번(../)이동, ../../(2번)</a>
+    <li> 절대 경로 </li>
+    <a href="C:\Users\sku-102-06\Desktop\front\day02\exam1.html"> 로컬 환경 절대주소 </a>
+    <a href="http://127.0.0.1:5500/day02/exam2.html"> 서버 환경 절대 주소 </a>
+    <a href="./exam1.html"> 서버환경 상대경로 </a> <!--상대 경로를 중심으로 짜는 것이 좋음. 절대주소 사용하면 전체 다 바꿔야 하기 때문.--> <br />
+    <a href="../day03/test.heml"> 다른 폴더의 html</a>
+</body>
+</html>
