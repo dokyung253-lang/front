@@ -32,3 +32,54 @@ console.log( var1 ); // 1) undefined : 변수는 존재하지만 값이 없다. 
 
 let var2  = null ; // 변수의 데이터가 유효하지 않는다. (정의는 되어있지만, 값이 없다.)
 console.log( var2 ); // 2) *null
+
+// 5. 배열 : 여러개 자료들을 *순서*대로 저장하는 *자료*
+let ary1 = [ '봄', '여름', '가을', '겨울' ];
+    // 1) let ary1 : 변수명 (선언/만들기)
+    // 2) = 대입, 오른쪽 자료를 왼쪽에 넣기
+    // 3) '봄', '여름' 등등 : 자료 
+    // 4) [ ] , 배열
+// 6. 인덱스 : 배열 내 저장된 순서번호* 0번 시작*, 중간에 삭제되더라도 한 칸 씩 당겨진다.
+console.log( ary1[ 0 ]); // 변수명[인덱스 번호], 봄
+console.log( ary1[ 1 ])
+console.log( ary1[ 2 ])
+console.log( ary1[ 3 ])
+// 배열 내 자료가 4개 이면, 길이: 4, 인덱스: 0~3
+
+// 7. 배열 내 자료(요소) 수정 : 변수명 [수정할인덱스] = 새로운 값
+ary1[ 0 ] = 'SPRING'; 
+
+// 8. 배열 내 자료(요소) 추가 : 변수명.push( 새로운 값 ), 마지막 인덱스 뒤로 추가됨
+ary1.push( 'SPRING2' ); console.log( ary1 );
+// ;세미콜론이란? 한 문장의 명령어 마침 뜻,
+//  한 줄에 문장이 하나이면 생략 가능 vs 한 줄에 두 문장이면 ; 세미콜론 필수
+
+// 9. 배열 내 자료(요소) 삭제 : 변수명.splice( 삭제할 인덱스 , 개수 )
+ary1.splice( 2, 1 ); // 2번 인덱스부터 1개 삭제
+console.log( ary1 );
+
+// 10. 배열 내 자료(요소) 중간 삽입 : 변수명.splice( 삽입할 인덱스, 0, '자료' )
+ary1.splice( 2, 0, '가을' ); console.log( ary1 );
+
+// 11. 배열 내 자료(요소) 값 찾기 : 변수명.indesOF( 찾을값 ), 찾을 값이 존재하면 인덱스 반환 없으면 -1
+let result = ary1.indexOf( '가을' ); console.log( result );
+
+// 12. 배열 내 자료 개수 반환 : 변수명.length , 배열 내 총개수 반환
+console.log( ary1.length ) // 5
+
+// 형 변환 , 다른 프로그래밍/환경 통신간의 데이터 변환 다수 발생
+let input = prompt ("숫자 : "); // prompt 무조건 문자열로 반환한다.
+console.log( typeof input ); // "100" -> string(문자열)
+
+input = input * 1;               // 방법 1]
+console.log( typeof input );   // "100" * 1 --> 100  number(숫자)
+
+input = Number( input );       // 방법 2]
+console.log( typeof input );
+
+console.log( Number("100") );       // "100" -> 100
+console.log( parseInt("100") );     // "100" -> 100
+console.log( parseFloat("3.14") );  // " 3.14" -> 3.14
+console.log( String(100) );         // 100 -> "100"
+console.log( 100 + "" );            // 100 -> "100"
+console.log( Boolean("true") );     // "true" -> true
