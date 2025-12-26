@@ -65,7 +65,7 @@ console.log( `result5 : ${ int2 % 7 == 0 }` )
 // [지문6] prompt 함수로 아이디 와 비밀번호를 입력받아서 (입력받은)아이디가 'admin' 이고 (입력받은)비밀번호가 1234 와 일치하면 true / 아니면 false 출력하시오.
 let id = prompt ('id: ');
 let pw = prompt ( 'pwd : ');
-// 조건 2개 == 이고 == 조건 1 && 조건 2
+// 조건 2개 == 이고 == 조건 1 && 조건 
 let result = id == 'admit' && pwd == '1234' // 조건 2개를 모두 만족하면 true
 console.log( `result6 : ${ result }` );
 
