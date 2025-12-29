@@ -1,0 +1,14 @@
+
+@font-face{
+    font-family: 'ThinRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ThinDungGeunMo.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+.writer
+    body > h4, h2{color : red;,  text-align: center ;} 
+    text-decoration: underline overline line-through
+    text-shadow: 5px 5px 5px lightgray ;
+    /* 텍스트 그림자 : x축(+right -left) y축(+bottom -top) 흐림 정도*/
+    
