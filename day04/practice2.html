@@ -5,10 +5,110 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="practice2.css" /> 
+
 </head>
 <body>
-    
+    <div class="header">
+  <img src="./성결 마크.jpg"; height="105" width="105" alt="병원 로고" class="logo" />
+  <h1 class="title"> 성결대학교 병원 내방객 설문지 </h1>
+    </div>
+   
+    <o1> 본 설문지는 질병관리본부의 '다중이용시설 대응지침'을 준수하며 코로나 19로부터 내방객 여러분을 보호하기 위해 
+        설문지 작성을 진행하고 있습니다. 부득이한 조치에 내방객들의 참여와 이해를 부탁드리며 
+        제출한 설문지는 확진자 발생 시 역학조사 용도 외에 사용되지 않음을 알려드립니다.
+        <br />
+<hr/>
+    </o1>
+        <p1> 
+        <h4> 1. 개인정보 </h4>
+        </p1>
+    <form> 
+        성함 : <input type="text" autofocus maxlength="10" placeholder="홍길동" /> <br/>
+        연락처 : <input type="text" autofocus maxlength="13" placeholder="01000000000" /> <br/>
+        날짜/시간 : <input type="datetime-local" /> <br/>
+    </form> <br />
+
+<hr/>
+
+</html>
+    <p2>
+    <h4> 2. 확인사항 </h4>
+    <table border="2" style="border-collapse: collapse;">         
+        <tr>
+            <ol>
+            <td>
+            1.  현재 발열(37.5도 이상) 및 호흡기 증상(기침, 가래, 콧물, 호흡곤란, 인후통 등)이 있습니까?
+            </td>
+            <td>
+            있음 <input type="radio" name = "가입경로"/>
+            </td>
+            <td>
+            없음 <input type="radio" name="가입경로" />
+            </td>
+            <div></div>
+        </tr>
+        <tr>
+            <td>
+            2. 최근 2주 이내에 코로나 19 감염증 확진자와 만난 적이 있습니까?  
+            </td>
+            <td>
+            있음 <input type="radio" name = "가입경로"/>
+            </td>
+            <td>
+            없음 <input type="radio" name="가입경로" />
+            </td>
+            <div></div>
+        </tr>
+        <tr>
+            <td>
+            3. 최근 2주 이내에 해외를 방문한 적이 있습니까?
+            </td>
+            <td>
+            있음 <input type="radio" name = "가입경로"/>
+            </td>
+            <td>
+            없음 <input type="radio" name="가입경로" />
+            </td>
+            <div></div>
+        </tr>
+        <tr>
+            <td>
+            4.최근 2주 이내에 10인 이상이 모인 곳에 방문한 적이 있습니까?
+            </td>
+            <td>
+            있음 <input type="radio" name = "가입경로"/>
+            </td>
+            <td>
+            없음 <input type="radio" name="가입경로" />
+            </td>
+            <div></div>
+        </tr>
+        <tr>
+            <td>
+            5. 현재 함께 거주하시는 분 중에 확진자가 있습니까? 
+            </td>
+            <td>
+            있음 <input type="radio" name = "가입경로"/>
+            </td>
+            <td>
+            없음 <input type="radio" name="가입경로" />
+            </td>
+            <div></div>
+        </tr>
+    </ol>
+    </table>
+    </p2>
+    <br />
+    <hr/>
+
+    <p3>
+    <h4> 3. 기타 요청사항 </h4>
+         <textarea cols="80" rows="1"></textarea> <br />
+    </p3> <br />
+     
+    <button type="button"> 제출하기 </button>
+
+
 </body>
 </html>

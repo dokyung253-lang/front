@@ -1,0 +1,31 @@
+
+.title{
+    font-family:  "맑은 고딕" /* 글꼴 */
+    font-size: 60px; /* 글꼴크기 */
+    font-weight: bold; /* 글꼴진하게 */
+    
+}
+/* 외부 폰트 : 구글 폰트(영문), 눈누(국문) 자주 사용 */
+@font-face {
+    font-family: 'nanum';
+    src: url(@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+) format('woff2');
+    font-weight: normal;
+    font-display: swap;
+    font-style: italic; /* 글꼴기울기 */
+}
+.content{
+    font-family: 'nanum';
+    color: black; /* 글꼴 색상 */
+    word-spacing: 10px; /* 단어 간격: 어간*/
+    letter-spacing: 2px; /* 글자 간격: 자간 */
+    <ol></ol>{line-height: 400%};/* 줄간격 : %백분율 */
+}
+.writer{
+    h1.title { text-align: center };
+
+button {
+  display: block;
+  margin: 20px auto;
+}
+}
