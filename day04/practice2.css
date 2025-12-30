@@ -22,10 +22,10 @@
     <ol></ol>{line-height: 400%};/* 줄간격 : %백분율 */
 }
 .writer{
-    h1.title { text-align: center };
+    body > h1.title { text-align: center };
 
-button {
-  display: block;
-  margin: 20px auto;
+    body > button {
+     display: block;
+     margin: 20px auto;
 }
 }
