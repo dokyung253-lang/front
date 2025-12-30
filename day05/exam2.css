@@ -1,0 +1,30 @@
+
+/* 작업용, 작업 마친 후 삭제 */
+*{
+    border: solid 1px red;
+    margin: 10px
+}
+
+.s1{
+    display: inline ; /* 표기 방법 */ /*사이즈 불가능*/
+    width: 100px; height: 100px; /* width height margin 적용 되지 않는다. */ /* (왼/오른) 안/바깥 여백만 가능*/
+    margin: 20px; padding: 20px; 
+
+}
+
+.s2{
+    display: block; /* 사이즈 가능 */ /* 한 줄 차지 구역: <div> <h> <p> <ul> <li> */
+    width: 100px; height: 100px;
+    margin: 20px; padding: 20px; 
+}
+
+.s3{
+    display: inline-block; /* 같은 줄에 위치하면서, 크기 조정이 가능 */ /* 한줄에 해당 구역 포함하면서 크기 조정: <input/> <button> (img/)*/
+    width: 100px; height: 100px; /* 사이즈 조정 */
+    margin: 50px; padding: 50px; /* 여백 조정 */
+    /* span과 div는 기본 값이 없음. <p>, <h1>, <ol>, <li>는 기본값이 있어서 전자를 더 많이 사용 */
+}
+
+.s4{
+    display: flex; /* 하위 요소들의 배치 방법 */
+}

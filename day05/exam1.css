@@ -4,6 +4,7 @@
     /* 테두리 : 선종류 선굵기 선색상 */
     border : solid 3px red;
     padding: 10px
+    margin : /* 바깥 여백*/ ;
 }
 /* 클래스 선택자*/
 .경기도{
@@ -16,5 +17,37 @@
     width : 500px ; /* 가로 사이즈 */
     height : 500px ; /* 세로 사이즈 */ 
     text-align: center ; /* 구역 정렬하는게 아니라 구역 내 content(내용물) 가로 정렬 */
-    
 }
+.안양시{
+    padding-top: 20px ; /* (테두리) 안쪽 여백*/
+    padding-right: 30px ;
+    padding-bottom: 40px ;
+    padding-left: 50px ;
+    margin-top: 50px ; /* (테두리) 바깥 여백 */
+    margin-right: 40px ;
+    margin-bottom: 30px ;
+    margin-left: 20px ;
+}
+.만안구{
+    width: 200px ; /* 가로사이즈 고정 , 만약 생략 시 100%(부모 크기) */
+    padding: 10px ; margin: 10px ;
+    box-sizing: border-box ; /* 구역 크기 : content + border + padding */
+    box-sizing: content-box ; /* 구역 크기(기본값): content */
+    margin: 0 auto ; /* 바깥 여백 이용한 구역 가로 가운데 정렬 */
+    /* 0 : 위아래 여백 없음, auto: 왼쪽오른쪽 자동 뜻 */
+    /* 주의할 점: width rk 100% 이거나 생략 시 불가능 */
+    background-color: pink ; /* 안쪽 여백의 배경색 */
+}
+/* input , img 등 정렬 주의 : 상위 요소 정렬(본인을 움직이는게 아님) */
+.사진{
+    width : 50px ;
+    /* img 선택자로 직접 text-align 적용 안됨 */
+}
+.input{
+    width: 100px ; 
+    /* img 선택자로 직접 text-align 적용 안됨*/
+    margin: 0 auto ; /* 불가능 */
+
+}
+
+
