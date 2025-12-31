@@ -1,0 +1,244 @@
+*{
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+.box{
+    /*transform: scale(1.5);*/
+    background-color: white;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 3px gray;
+    /* margin-top: 200px; */
+}
+.image > img{
+    width: 600px;
+}
+.title{
+    background-color: white;   
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.subtitle{
+    background-color: white;
+    font-size: 20px;
+    border-bottom: solid 1px lightslategray;
+    width: 500px;
+    padding-bottom: 15px;
+}
+.name{
+    flex-direction: row;
+    background-color: white;
+    margin-top: 15px;
+}
+.namebox{
+    background-color: white;
+    border: 1px gray solid;
+    border-radius: 10px;
+    text-align: left;
+    padding: 4px;
+    padding-left: 20px;
+    width: 194px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.agetext{
+    background-color: white;
+    flex-direction: row;
+    width: 450px;
+}
+.agetext > img{
+    width: 20px;
+    margin-top: 5px;
+}
+.age{
+    background-color: white;
+    flex-direction: row;
+    width: 485px;
+}
+.agebox{
+    background-color: white;
+    flex-direction: row;
+}
+
+.ageinput{
+    width: 140px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+     padding: 7px;
+     padding-left: 45px;
+}
+.성별텍스트{
+    background-color: white;
+    flex-direction: row;
+    width: 450px;
+}
+.성별텍스트 > img{
+    width: 20px;
+    margin-top: 5px;
+}
+.성별테이블{
+    display: flex;
+    background-color: white;
+    width: 500px;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    
+}
+.성별박스{
+    display: flex;
+    background-color: white;
+    border: 1px lightslategray solid;
+    border-radius: 5px;
+    width: 140px;
+    height: 36px;
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+.data{
+    background-color: white;
+    flex-direction: column;
+}
+.data > input{
+    background-color: white;
+    border: 1px lightslategray solid;
+    border-radius: 5px;
+    width: 445px;
+    height: 36px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.textbox{
+    background-color: white;
+    padding: 10px;
+}
+.text{
+    background-color: white;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+.text > a{
+    background-color: white;
+    display: inline;
+    text-decoration: none;
+    color: darkblue;
+}
+.buttonbox{
+    background-color: white;
+}
+.buttonbox > button{
+    background-color: #49a22e;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 230px;
+    height: 40px;
+    font-size: 23px;
+}
+.buttonbox > a{
+    background-color: white;
+    text-decoration: none;
+}
+body > script + svg, 
+body > script {
+    display: none !important;
+}
+
+.footer{
+    background-color: white;
+    color: rgb(126, 125, 125);
+    width: 980px;
+    margin: 40px;
+    font-size: 11px;
+}
+
+.directionList{
+    background-color: white;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.directionList > li{
+    background-color: white;
+    margin: 5px;
+}
+.directionList > li > a{
+    background-color: white;
+    color: rgb(126, 125, 125);
+    text-decoration: none;
+}
+
+
+.languageList{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.languageList > li{
+    background-color: white;
+    margin: 5px;
+}
+.mvlcopyright{
+    background-color: white;
+    text-align: center;
+}
+.copyright{
+    background-color: white;
+}
+._41ug{
+    flex-direction: row;
+}
+
+.footer{
+    width: 980px;
+    margin: 40px;
+    background-color: white;
+    color: rgb(126, 125, 125);
+    font-size: 11px;
+}
+
+.directionList{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.directionList > li{
+    margin: 5px;
+}
+
+.languageList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.languageList > li{
+    margin: 5px;
+}
+
