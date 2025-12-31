@@ -1,0 +1,34 @@
+*{
+    color: rgb(126, 125, 125);
+    font-size: 11px;
+}
+.footer{
+    width: 980px;
+    margin: 40px;
+
+}
+
+.directionList{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.directionList > li{
+    margin: 5px;
+}
+
+.languageList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.languageList > li{
+    margin: 5px;
+}
+
