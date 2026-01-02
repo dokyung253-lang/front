@@ -1,0 +1,89 @@
+
+
+/* 공통 css이면서 관례적인 기본 css*/
+*{
+    box-sizing: content-box;
+    font-family: 굴림 나눔고딕;
+    font-size: 12px ;
+    padding: 0px; margin: 0px;
+}
+a{ /* a마크업 기본 css 제거 */
+    text-decoration: none;
+    color: black;
+}
+li{ list-style-type: none; } /* 글머리 제거 */
+
+
+/* ================= [1] 헤더 =============== */
+/* div, li등 : block이라서 한 줄에 하나씩 표시*/
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px; margin: 0 auto;
+}
+
+#header .top-menu{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px;
+
+}
+#header .top-menu li a{
+    margin-left: 5px;
+}
+#header .main-menu{
+    display: flex; justify-content: flex-end;
+    margin: 20px 0px;
+
+}
+#header .main-menu li a{
+    margin-left: 30px;
+    font-size: 20px; font-weight: bold;
+}
+
+
+/* ================= [2] 대표이미지  =============== */
+#main-img > img {
+    width: 100%; 
+}
+
+/* ================= [3] 본문  =============== */
+#main{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px; margin: 20px auto;
+}
+#sidebar{ width: 220px; }
+#sidebar > h3{
+    background-color: gray; color: white;
+    padding: 10px; 
+    font-size: 20px
+}
+#sidebar > ol > li{
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+#content{ width: 1030px; }
+#content > h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eeeeee ;
+    padding-bottom: 20px ; /*테두리 기준으로 컨텐츠 안 여백 */
+    margin-bottom: 20px ; /* 테두리 기준으로 컨텐츠 밖 여백 */
+}
+#content > img{
+    /* 이미지 가운데 정렬*/
+    display: block; /* 이미지를 감싼 구역 생성 */
+    margin: 0 auto; /* 좌우여백 동일하게하고, 해당 요소를 부모요소의 가운데에 배치 */
+}
+/* ================= [4] 푸터  =============== */
+#footer{
+    background-color: #2c2a29;
+    color: white;
+    padding: 15px 0px;
+}
+#footer-inner{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px; margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+
+
+복수 선택자: 선택자 A, 선택자 B
+#header, #main, #footer{
+    width: 1280px; /* pc: 1000~ 1400 */
+    margin: 0 auto;
+}
+
+
+#main{
+    display: flex; /* 하위 요소들을 배치 방법 : flex */
+    flex-direction: row ; /* 가로배치(기본값) */
+    flex-wrap: nowrap;
+    justify-content: space-between; /* 양쪽에 여백없이 균등정렬*/
+
+}
+
+#content{ 
+/* 페이지 높이(height)는 지정하지 않음(자동크기 100%), 가로크기(width)만 정함*/
+    width: 830px; /* 크키: px(픽셀/고정) , %(비율/반응형) */
+}
+
+#sidebar{
+    width: 420px;
+}
+
+#footer{
+    background-color: grey;
+}
