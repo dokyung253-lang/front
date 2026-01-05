@@ -1,0 +1,105 @@
+
+/* ================= 1. 공통 css =====================*/
+*{ padding: 0px; margin: 0px; } /* 1. 기본 여백 제거 */
+*{ box-sizing: border-box; } /* 2. 테두리까지 사이즈 계산 */
+a{ text-decoration: none; color: black; } /* 3. a마크업 기본값 제거*/
+li{ list-style-type: none;} /* 4. 글머리 제거 */
+
+
+/*==================== 2. 헤더 =======================*/
+#header{
+    width: 1280px;  /* 가로사이즈 */
+    margin: 0 auto; /* 구역 가로 가운데 정렬*/
+    display: flex;  /* */
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#header > .right-head  > ol{ /* #아이디, 클래스, 마크업 */
+    display: flex; justify-content: flex-end;
+} 
+
+.top-menu > li {
+    font-size: 12px; margin: 10px 3px; }  
+
+.main-menu > li {
+    font-size: 20px; font-weight: bold;
+    margin: 10px 0px 10px 80px ; /* 바깥여백 : 위 오른쪽 아래 왼쪽 순서 */ 
+}
+
+/* ===================== 3. 본문 css ================== */
+#main{
+    width: 1280px; margin: 20px auto;
+    display: flex; justify-content: space-between;
+
+}
+#main > #sideBar { width : 250px; margin: 20px; } /* 가로사이즈 */  
+#main > #contents { 
+    width : 1000px; 
+    display: flex; justify-content: space-between;
+}
+#main > #contents > #left-contents, #right-contents { width: 480px; }
+
+
+
+/* ===================== 3. 본문-사이드바 css ================== */
+#sideBar > .title{
+    background-color: #0ca9a2; color: white;
+    font-size: 20px; padding: 10px;
+
+}
+#sideBar > .comment{ padding: 5px 0px; line-height: 150%;/* 줄간격 */
+}
+#sideBar > .searchbox >input {
+    border-radius: 10px; /* 둥근모서리 */
+    padding: 5px;
+    width: 180px;
+}
+#sideBar > .searchbox > button { padding: 4px; }
+#sideBar > .sub-title{
+    border-top: 2px solid black; border-bottom: 1px solid #eeeeee;
+    margin-top: 30px; padding: 10px 0px;
+    
+}
+#sideBar > .sub-menu > li{ padding: 5px; }
+
+/* ====================== 6. 본문 게시판 ========================= */
+#contents .sub-title {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#contents .board > li {
+    display: flex; justify-content: space-between;
+    padding: 7px 0px;
+}
+#contents .board { margin-bottom: 50px ;}
+
+/* ==================== 7. 본문-제방이미지=========================== */
+#right-contents > .product-list {
+    display: flex; /* 하위 요소들의 배치 방법*/
+    flex-wrap: wrap; /* 만일 하위 요소들이 부모 요소의 크기보다 커지면 줄바꿈 */
+
+}
+#right-contents > .product-list > .product{
+    margin: 0px 50px 50px 0px; /* 순서 : top right bottom left */
+}
+
+/* ====================== 8. footer css ================================ */
+#footer{
+    background-color: #05344e;
+    color: white; padding: 20px 0px;
+}
+#footer > .footer-inner{ width: 1280px; margin: 0 auto; }
+#footer > .footer-inner > .ftop-menu{
+    display: flex;
+    margin-bottom: 30px;
+}
+.ftop-menu > li{ margin-right: 30px ;}
+
+#footer > .footer-inner > .fbottom-menu{
+    display: flex;      justify-content: space-between;
+    margin-bottom: 30px;
+}
+.fbottomenu h3{ margin-bottom: 5px;}
+.fbottom-menu > ul > li{ margin: 5px 0px ;}
