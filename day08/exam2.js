@@ -10,13 +10,13 @@ if( max < number[5] ) max = number[5];
 console.log0 ( max ); */
 
 // vs
-/*let numbers = [23, 5, 67, 12, 88, 34];
+let numbers = [23, 5, 67, 12, 88, 34];
 let max = numbers[0]; 
 for( let index = 1 ; index <= numbers.length -1 ; index++ ){
     if( max < numbers[index] ){ max = numbers[index]; }
 }// for end
 console.log( max );
-*/
+
 
 /*문제 2: 별 찍기 (기본 역삼각형)
 for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하시오.
@@ -32,26 +32,55 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 
 let output = ``; // 출력할 문자열들을 (누적) 저장하는 변수
 for( let line = 1 ; line <= 5 ; line ++ ){  // 1부터 5이하)까지 1씩 증가한다. (5회)
-    console.log( '=========줄바꿈=========' );
-    output += "\n";
-} // for end
-console.log( output ); // 예상 출려기 \n\n\n\n\n
+    for( let star = 1 ; star <= 5-line+1 ; star++ ){
+    output += "*"; // 줄바꿈
+    } // for end
+    output += "\n"; // 줄바꿈
+}
+console.log( output ); // 예상 출력:  \n\n\n\n\n
 
 /*문제 3: 배열에서 특정 문자 찾기 (break 활용)
 다음 사용자 이름 배열에서 이름에 '솔' 이라는 글자가 들어간 첫 번째 사용자를 찾으면, 해당 사용자의 이름을 출력하고 반복문을 종료하시오.
-let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
 힌트: 문자열의 .indexOf() 메소드를 사용하세요.*/
+let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
+for( let index = 0; index <=userNames.length-1 ; index++){// (1) 배열 내 모든 이름 하나씩 꺼내기
+     let name = userNames[index]; // (2) index 번쨰 이름 꺼내기
+     if(name .indexOf("솔") != -1){ // (3) 문자열은 배열이다.  김 [0] 하[1] 준 [2]
+        console.log(name); // (4) 이름 출력
+        break; // (5) 가장 가까운 반복문 탈출
+        }// if end
+} // for end
+
 
 /*문제 4: 2차원 배열의 모든 요소 출력하기
-다음과 같은 2차원 배열(좌석표)이 있습니다. 중첩 for 반복문을 사용하여 모든 좌석의 값을 순서대로 출력하시오.
-let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];*/
+다음과 같은 2차원 배열(좌석표)이 있습니다. 중첩 for 반복문을 사용하여 모든 좌석의 값을 순서대로 출력하시오.*/
+let seatLayout = [ 
+['A1', 'A2', 'A3'], // 1행 [1] [2] [3]
+['B1', 'B2', 'B3'], // 2행 [1] [2] [3]
+['C1', 'C2', 'C3'] // 3행 [1] [2] [3] 
+];
+for( let index = 0; index <= seatLayout.length -1 ; index++ ){
+    let row = seatLayout[index]; // index번째 행 추출/꺼내기
+    // row값 예상 : ['A1', 'A2', 'A3'] 또는 ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']
+    for( let col = 0; col <= row.length -1 ; col++){
+        console.log( row[col]) ; // 행 마다 col번째 열 추출 / 꺼내기
+    } // for end
+} // for end
+
 
 /*문제 5: 배열의 중복 요소 제거하기
 주어진 배열에서 중복된 요소를 제거하고, 중복 없는 새로운 배열을 만들어 출력하시오.
-let numbers = [1, 5, 2, 3, 5, 1, 4, 2];
 힌트: 새로운 배열을 만들고, for 반복문으로 기존 배열을 순회하며 새로운 배열에 해당 요소가 없을( .indexOf() == -1 ) 때만 추가(push())합니다.*/
-
-
+// 낮은 순서대로 배열. for 반복문으로 
+let numbers2 = [1, 5, 2, 3, 5, 1, 4, 2];
+let newAry = []      // 중복이 없고 새로운 배열이고
+for( let index= 0; index <= numbers2.length -1 ; index++){
+    let num = numbers2[index]; // index 값 추출 / 꺼내기
+    if( newAry.indexOf( num ) == -1 ){ // .index( 찾을값 ) : 찾았으면 인덱스 변환 함수 , 없으면 -1 
+        newAry.push( num );              // .push( 추가할 값 ): 배열 내 맨 마지막 요소 값 추가
+    } // if end
+} // for end
+console.log( newAry );
 
 /*문제 6: 버블 정렬 (Bubble Sort) 구현하기
 주어진 숫자 배열을 '버블 정렬' 알고리즘을 이용하여 오름차순으로 정렬하고, 최종 정렬된 배열을 출력하시오.
