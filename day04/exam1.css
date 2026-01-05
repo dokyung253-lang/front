@@ -3,7 +3,7 @@
 h5 { color: orange; }
 
 /* 1. 전체 선택자 */
-*{ font-sizeL 20px ; } /* 글꼴크기 px(단위), 공통부분 css 처리 할 때 씀 */
+*{ font-size: 20px ; } /* 글꼴크기 px(단위), 공통부분 css 처리 할 때 씀 */
 
 /* 2. 마크업 선택자 */
 h6{ font-size: 15px ; }
