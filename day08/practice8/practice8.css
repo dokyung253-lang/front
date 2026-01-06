@@ -1,6 +1,8 @@
-#wrap{ width: 1280px;  margin: 0 auto; }
+#wrap{ 
+    
+    width: 1280px;  margin: 0 auto; }
 
-/* =========================1. 헤더========================*/
+/* ========================= 1. 헤더========================*/
 .header{
     display: flex;
     justify-content: space-between;
@@ -13,23 +15,44 @@
     gap: 20px;
     font-size: small; color: rgb(36, 35, 35);
 }
-/* =========================2. 메인========================*/
-/*1. upper 내용을 가로 일직선 배열
-2. 예약안내 박스 만들기
-3. 포토갤러리 박스 만들기*/
+/* ========================= 2. 메인 ========================*/
+
 .upper{
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
-.main-img > img{
-    width: 100%;
+
+.icon1 icon2{ width:80%; height: 80%; }
+.upper > ul{
+    list-style: none;
+    padding-right:50px;
 }
 
-4. lower박스 배경 색 조정 및 높이 설정
-5. 사진 및 텍스트의 크기, 간격 조정
-6. 로어박스와 푸터 사이의 간격 생성
+.product-list{
+    background-color: beige; width: 1280px; height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+.product-list > ul{list-style: none; margin:0px; }
 
+.pimg1, .pimg2, .pimg3, .pimg4{
+    width: 280px; height: 200px
+    
+}
 /* =========================3. 푸터========================*/
-1. 
+.footer{ 
+    width: 1280px; height: 300px;
+    background-color: rgb(57, 55, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer1{ font-weight: bold; color:white; }
+
+.info{ color:white; margin: 10px;}
+
