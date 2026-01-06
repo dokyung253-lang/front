@@ -1,0 +1,19 @@
+.parent{
+    background-color: red;
+    width: 700px; height: 450px;
+    margin: 0 auto;
+    position: relative; /* 하위 요소의 absolute 속성 값 위치 기준*/
+}
+.box{
+    background-color: yellow;
+    width: 100px; height: 70px;
+    border-radius: 5px;
+    position: absolute; /* 자리 차지 안 함 */
+    display: flex; justify-content: center; align-items: center;
+}
+.box1{ left: 300px; top: 50px;}
+.box2{ left: 150px ; top: 120px;}
+.box3{ left: 450px; top: 120px; }
+.box4{ left: 150px ; top: 260px; }
+.box5{ left: 450px ; top: 260px; }
+.box6{ left: 300px ; top: 330px; }
