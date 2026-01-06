@@ -1,0 +1,33 @@
+
+/* 및줄 제거, 색상 검정 */
+a{ text-decoration: none; color: black; }
+
+/* [1]선택자 : hover 만일 해당 요소에 마우스를 올렸을 때 */
+a:hover{ color: red; font-size: 20px;}
+
+/* [2] 선택자 : visited 만일 브라우저(크롬) 내 방문한 적이 있는 링크일 때 */
+a:visited{ color :blue; font-size: 10px; }
+
+/* [3] 선택자: active 만일 해당 요소를 클릭했을 떄  */
+a:active{ color: yellow; font-size: 30px;}
+
+/*[4] 선택자: ::before /* HTML에 존재하진 않지만 가상의 요소  */
+.box1::before{
+    content : "[가상요소 before 구역]";
+    color: aqua;
+}
+.box1::after{
+    content : "[가상요소 after 구역]" ;
+    color: brown;
+}
+/* [활용 1] 글머리 */
+li{ list-style-type: none;}
+.box2 > li::before{ content: "★"; color: red;}
+
+/* [활용 2] 글머리2 */
+.box2 > li::after{ content: url("./오빤쮸.jpg");}
+
+/* [5] nth-of-type( 순서 번호)          하위 요소들이 여러개 일 때 번호로 선택하기 */
+.box2 > li:nth-of-type(1){
+    color: red;
+}
