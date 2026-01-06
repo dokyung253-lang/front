@@ -21,4 +21,8 @@ obj2.속성명3 = true;
 obj2.속성명3 = false;
 // [7] 객체 속성 삭제, delete 객체변수명.속성명 ; 
 delete obj2.속성명3;
-
+// [8] 객체 속성 내 자료는 모든 자료형(타입) 가능하다. 
+let obj3 = { a : 1, b :"안녕", c: true, d: [1 ,2]}
+// [9] in 연산자, '찾을속성명' in 객체변수명, 해당 객체 내 속성이 있는지 확인(true/false)
+console.log( 'f' in obj3 ) // false
+console.log( 'a' in obj3 ) // true
