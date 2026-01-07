@@ -20,12 +20,12 @@ a{ color: black; text-decoration: none;}
     font-size: 14px;
     padding-left: 20px; padding-right: 20px; }
 .mainH{  }
-.topmenu{ display: flex; justify-content: space-around; margin: 20px; }
+.topmenu{ display: flex; justify-content: space-evenly;   }
 .searchbox{ border-bottom: 1px solid black; }
 .돋보기{ width: 15px;}
 
 /*========= 메인=======*/
-#content{ width: 1600px; margin: 0 auto;}
+#content{ width: 1280px; margin: 0 auto;}
 
 /*=========푸터=========*/
 #footer{ width: 100% ;}
