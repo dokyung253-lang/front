@@ -1,11 +1,43 @@
-
-.box{ 
-    background-color: rgb(236, 236, 236);
-    width: 600px; height: 500px;
+*{ margin: 0px; padding: 0px; }
+li{ list-style-type: none;}
+a{ text-decoration: none; color: black;
 }
-.roundbox{
-    background-color: rgb(43, 42, 42);
-    border-radius: 100%;
-    width: 50px; height: 50px;
-    text-decoration-color: white;
+
+/* 우측 하단에 토글 전체 이동*/
+.toggle-wrap{ 
+    position: fixed; /* 화면 상관없이 위치 고정 */
+    bottom: 10px; /* 아래에서 위로 10 이동 */
+    right: 10px; /* 오른쪽에서 왼쪽으로 10 이동*/
+}
+/* 메인 버튼 구성*/
+.toggle-main{
+    background-color: #2b2a2a;
+    border-radius: 50%; width: 50px; height: 50px;
+    color: white; font-size: 30px; 
+    text-align: center;
+    line-height: 155%;
+}
+/* 서브메뉴 구성 */
+.toggle-sub{
+    position: absolute;
+    bottom: 60px; right: 5px;
+    padding-bottom: 8px;
+    display: none; /* 서브 메뉴 숨기기*/
+}
+
+.toggle-sub > li{
+    width: 30px; height: 30px; border-radius: 50%;
+    background-color: skyblue;
+    font-size: 10px;
+    margin-bottom: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-sub > li > a{
+    color: blue; font-weight: bold;
+}
+/* 메인버튼을 호버했을 때 서브메뉴 열기 */
+.toggle-wrap:hover .toggle-sub{
+    display: block; /* 서브메뉴 열기 */
 }
