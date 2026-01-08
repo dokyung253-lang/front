@@ -1,0 +1,28 @@
+
+.basictable{
+    width: 500px;
+    border: 1px solid black;
+}
+.basictable th, .basictable td{
+    border: 1px solid black;
+    padding: 10px;
+}
+/* 형제 선택자*/
+.basictable td:nth-child( 1 ){ background-color: aqua;} 
+.basictable td:nth-child(2){ text-align: center; }
+
+/* 속성 선택자[속성명] */
+.basictable td[colspan]{text-align: right;}
+
+.styletable{ 
+    width: 700px;
+    border-collapse: collapse; /* 이중 테두리를 하나의 테두리로 병합*/
+}
+.styletable th, .styletable td{
+    border: 1px solid black; padding: 5px;
+ }
+ .styletable > tbody > tr:nth-of-type(odd){
+        background-color: #eeeeee;}
+.styletable > tbody > tr:hover{
+    background-color: grey; color:white;
+}

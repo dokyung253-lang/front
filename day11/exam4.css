@@ -1,0 +1,35 @@
+
+.box{   border: 2px solid red;    padding: 30px;}
+.back1{
+    background-color: rgb(248, 240, 230);
+    background-color: aqua;
+    background-color: rgb( 0, 0, 255 );
+    /* rgba( 0~255, 0~255, 0~255, 0~1 ) 빨, 노, 파, 투명도*/
+    background-color: rgba( 0, 0, 255, 0.5 );
+}
+/* [1] 이미지 삽입할 때 img 대신에 배경으로 가능*/
+.back2{
+    /* background-image: url("파일경로");*/
+    background-image: url("./dog.jpg");
+    /* background-repeat: no-repeat; , 채우기 없음 */
+    background-repeat: no-repeat;
+    /* background-position: center; , 배경이미지 위에 텍스트를 얹을 때 위치 설정 */
+    background-position: left;
+}
+.back3{
+    background-image: url("./pattern.jpg");
+    background-repeat: repeat;      /* 기본값 : 만일 비어있는 공간을 반복 채움(패턴) */
+}
+.back4{
+    background-image: url("./dog.jpg");
+    background-repeat: no-repeat ;
+    background-size: cover;         /* 비율 유지, 잘림 생길 수 있음*/
+    background-position: center;
+    background-attachment: fixed;   /* 패럴렉스: 스크롤 이동해도 배경이미지는 고정된다.*/
+}
+.box2{
+    width: 200px; height: 200px;
+    background-image: url("./아이콘들.png");
+    background-repeat: no-repeat;
+    background-position: 3px 3px; /* 위치 : left, top*/
+}

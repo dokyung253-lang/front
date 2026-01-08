@@ -1,0 +1,21 @@
+
+.imgBox{ width: 300px ; height: 300px;
+         border : 1px solid rgb(148, 91, 11); margin-bottom: 20px;}
+/* [1] 만일 사진의 크기가 부모요소 크기보다 커지면 사이즈 설정 */
+.imgBox > img{ width: 100%; height: 100%;}
+
+/* [2] fill : 기본값. 영역채움, 비율 무시*/
+.img1{ object-fit: fill; } 
+
+/* contain: 전체 영역이 보이도록 비율 유지, 일부 여백이 존재할 수 있음 */
+.img2{ object-fit: contain; }
+
+/* cover: 영역채우면서 비율 유지 , 일부 잘림이 존재할 수 있음*/
+.img3{ object-fit: cover; } 
+
+/* none: 이미지 사이즈 조정 없이, 그대로  */
+.img4{ object-fit: none; }
+
+/* [3] object-position: 잘린 이미지 위치 조정 */
+.img5{ object-fit: cover; object-position: left;}
+.img6{ object-fit: contain; object-position: left;}
