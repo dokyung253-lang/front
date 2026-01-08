@@ -95,8 +95,6 @@ console.log( movieTitles );
 const team = [{ name: '철수', department: '개발팀' },{ name: '영희', department: '기획팀' }, { name: '민수', department: '개발팀' }, { name: '지혜', department: '기획팀' }];
 
 
-
-
 // 문제 8: 장바구니 총액 계산하기
 // 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
 // cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
