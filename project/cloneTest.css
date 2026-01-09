@@ -38,11 +38,9 @@ width: 100%;
 
 .header{
  background-color: #fff;
-   position: sticky;
-   z-index: 2;
-   
-  top: 0px;
-  
+ position: sticky;
+ z-index: 2;
+ top: 0px;
 }
 
 .header-inner{
@@ -50,6 +48,7 @@ width: 100%;
   justify-content: space-between;
   width: 380px;
   padding: 0px 10px;
+  
 }
 
 .header-inner > div{ 
@@ -59,6 +58,7 @@ padding: 10px 0px;
 #main{
     padding: 15px;
     width: 414px;
+    background-color: white;
 }
 .top{   
         display: flex;
@@ -105,11 +105,11 @@ padding: 10px 0px;
 /*여기까지 원래 GiftList*/
 
 /* 푸터 ----------------------------------*/
-.footer{
+#footer{
   background-color: white;
   margin-bottom: 10px;
- /* display: contents;*/
-  position: fixed;
+  display: contents;
+  position: ;
   bottom: 0px;
   width: 414px;
   z-index: 3;
