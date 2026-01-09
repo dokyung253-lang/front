@@ -1,14 +1,17 @@
-*{ box-sizing: border-box;
-   margin: 0px;
-   padding: 0px;
-   font-size: 12px;
-   box-sizing: content-box;   
-   font-family: "Noto Sans KR", sans-serif;
+/* 전체 적용*/
+*{
+  margin: 0px;
+  padding: 0px;
+ font-size: 12px;
+  box-sizing: content-box;   
+font-family: "Noto Sans KR", sans-serif;
 }
+
 a{ /* a마크업 기본 css 제거*/
   text-decoration: none; 
   color: black;
 }
+
 li{
   list-style-type : none; 
 }
@@ -20,6 +23,15 @@ html{
   width: 100%;
   height: 100%;
 }
+
+/* 바탕 */
+.background{
+  display: flex; 
+ height: 100%;
+  background-color: #f8f8f8;
+width: 100%;
+}
+
 .wrap{
   display: flex;
   background-color: #f8f8f8;
@@ -27,12 +39,19 @@ html{
    width: 100%;
  height: 100%;
 }
-/* 바탕 */
-.background{
-  display: flex; 
- height: 100%;
-  background-color: #f8f8f8;
-width: 100%;
+
+/* 왼쪽 화면 */
+.pc1{
+  width: 414px;
+   position: relative ;
+   background-color: white;
+}
+
+/* */
+.content{
+  background-color: white;
+  text-align: center;
+  
 }
 /* 헤더 */
 
@@ -55,54 +74,70 @@ width: 100%;
 .header-inner > div{ 
 padding: 10px 0px;
 }
-/*여기서부터 원래 giftlist file*/
-#main{
-    padding: 15px;
-    width: 414px;
-}
-.top{   
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 20px;
-        align-items: center;
-        text-align: center;
-}
-.top > img{ width: 25px; height: 25px;  }
 
-.searchField{
-    width: 100%;
-    border: 1px solid lightgray;
-    display: flex;
-    border-radius: 25px;
-    height: 40px;
+/* 메인 1 */
+
+.main > a{
+  background-color: white;
+   z-index: 2;
+    position: relative;
 }
-.searchField > input { 
-    border: none; width: 250px;
-    outline: none;
-    padding-left: 15px;
+.main0{ z-index: 2;}
+.main{z-index: 2;}
+.main > ul{
+  padding: 22px 0px;
+  display: flex;
+    justify-content: center;
+z-index: 2;
+}
+.main > ul > li{
+  padding: 0px 22.8px;
+  text-align: center;
+  z-index: 2;
 }
 
-.searchField>a>img{
-    width: 30px; height: 30px;}
-.searchField>a{
-    width: 80px;
-    text-align: center;
-    background-color: rgb(230, 228, 228);
-    border-radius: 25px;
-    padding-block: 3px;
-    }
-.empty{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    text-align: center; gap: 10px;
-    padding-top: 100px;
-    padding-bottom: 400px;
-    border-bottom: 1px solid rgb(230, 228, 228);
+.main > ul > li > a >p{    font-family: "Pretendard";
+  
 }
-.empty > img{ width: 180px; height: 180px;}
-/*여기까지 원래 GiftList*/
+/* 메인 2 */
+.main2{
+  padding: 22px 0px;
+  background-color: #f4f4f4;
+  z-index: 2;
+  position: relative;
+}
+
+.main2 > h2{
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  padding: 0px 10px;
+}
+
+.review{
+  display: flex;
+}
+
+.pic1{
+  padding: 10px;
+
+}
+.pic2{
+  padding: 10px;
+}
+
+.pic1 > div > a> img {
+    border-radius: 10px;
+}
+.pic2 > div > a> img {
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+.pic2 >div > img{
+  object-fit:cover; object-position: left;??
+}
+
 
 /* 푸터 ----------------------------------*/
 .footer{
