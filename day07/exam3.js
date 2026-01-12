@@ -29,7 +29,7 @@ for( let index = numbers.length -1 ; index >= 0 ; index --){console.log( number[
 for 반복문을 사용하여 1부터 50까지 모든 정수의 합을 구하여 콘솔에 출력하시오.*/
 // 초기값 : let i = 1;  // 조건문 : i <= 50;  //  증감식 : i++;   // 실행문 : sum = sum + 1
 let sum = 0; // 총합계 저장하는 변수
-for( let i = 1 ; i <= 50 ) ; i++ {sum = sum +1 }  // sum += i
+for( let i = 1 ; i <= 50; i++) {sum = sum +1 }  // sum += i
 console.log( sum ); // // 1275 누적 총합계
 
 /*문제 5: 짝수만 출력하기

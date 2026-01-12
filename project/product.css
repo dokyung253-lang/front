@@ -36,19 +36,20 @@ width: 100%;
 }
 /* 헤더 */
 
-.header{
- background-color: #fff;
- position: sticky;
- z-index: 2;
- top: 0px;
+#header{
+  background-color: #fff;
+   position: sticky;
+   z-index: 2;
+  top: 0px;
+  
 }
 
 .header-inner{
   display: flex;
   justify-content: space-between;
-  width: 380px;
+
   padding: 0px 10px;
-  
+  margin: 0 auto;
 }
 
 .header-inner > div{ 
@@ -58,7 +59,6 @@ padding: 10px 0px;
 #main{
     padding: 15px;
     width: 414px;
-    background-color: white;
 }
 .top{   
         display: flex;
@@ -98,28 +98,26 @@ padding: 10px 0px;
     align-items: center;
     text-align: center; gap: 10px;
     padding-top: 100px;
-    padding-bottom: 400px;
-    border-bottom: 1px solid rgb(230, 228, 228);
 }
 .empty > img{ width: 180px; height: 180px;}
 /*여기까지 원래 GiftList*/
 
 /* 푸터 ----------------------------------*/
-#footer{
+.footer{
   background-color: white;
   margin-bottom: 10px;
-  display: contents;
-  position: ;
+ /* display: contents;*/
+  position: fixed;
   bottom: 0px;
   width: 414px;
   z-index: 3;
 
 }
 .footer-head{
-  position: absolute;
   bottom: 80px;
   z-index: 1;
   margin-top: 100px;
+  border-top: 1px solid lightgrey;
 }
 
 /*푸터 탑*/

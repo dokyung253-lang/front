@@ -1,0 +1,194 @@
+/* 전체 적용*/
+*{
+  margin: 0px;
+  padding: 0px;
+ font-size: 12px;
+  box-sizing: content-box;   
+font-family: "Noto Sans KR", sans-serif;
+}
+
+a{ /* a마크업 기본 css 제거*/
+  text-decoration: none; 
+  color: black;
+}
+
+li{
+  list-style-type : none; 
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+
+/* 바탕 */
+.background{
+  display: flex; 
+ height: 100%;
+  background-color: #f8f8f8;
+width: 100%;
+}
+
+.wrap{
+  display: flex;
+  background-color: #f8f8f8;
+   justify-content: space-evenly;
+   width: 100%;
+ height: 100%;
+}
+
+/* 왼쪽 화면 */
+.pc1{
+  width: 414px;
+   position: relative ;
+   background-color: white;
+}
+
+/* */
+.content{
+  background-color: white;
+  text-align: center;
+  
+}
+/* 헤더 */
+
+.header{
+ background-color: #fff;
+   position: sticky;
+   z-index: 2;
+   
+  top: 0px;
+  
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  padding: 0px 10px;
+}
+
+.header-inner > div{ 
+padding: 10px 0px;
+}
+
+/* 메인 1 */
+
+
+/* 푸터 ----------------------------------*/
+.footer{
+  background-color: white;
+  margin-bottom: 10px;
+ /* display: contents;*/
+  position: fixed;
+  bottom: 0px;
+  width: 414px;
+  z-index: 3;
+
+}
+.footer-head{
+  position: absolute;
+  bottom: 80px;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+/*푸터 탑*/
+.footer_top{
+  padding: 22px 16.5px 18px;
+  text-align: center;
+   background-color: white;
+  
+}
+
+.footer_img{
+  margin-bottom: 10px;
+}
+
+/*푸터 센터*/
+.footer_center{
+  text-align: center;
+   padding: 0px 16px 15px;
+    background-color: white;
+
+}
+
+
+.약관 > ul {
+  display: flex;
+  padding-left: 20px;
+
+}
+
+.약관 > ul >li{
+    padding: 0px 5px;
+}
+span{
+  padding-left: 10px;
+}
+
+/*푸터 바텀*/
+.footer_bottom{
+  border-top:  1px solid #eeeeee;
+  position: sticky;
+  bottom: 0px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.footer_bottom_img{
+  display: flex;
+}
+
+.footer_bottom_text{
+  display: flex;
+}
+
+
+.footer_bottom_img > div{
+  width: 100%;
+}
+
+.footer_bottom_text > div{
+  width: 100%;
+}
+
+.푸터사진{
+  text-align: center;
+  padding-top: 9px;
+}
+
+
+.푸터글{
+  text-align: center;
+  padding-bottom: 9px;
+}
+
+
+/* 오른쪽 화면 */
+.pc2{ 
+  padding: 90px 0px 0px 30px;
+  width: 300px;
+  height: 832px;
+}
+
+.right1{ 
+  text-align: center;
+  padding: 20px 0px ;
+}
+
+.right2{ 
+  display: flex;
+  margin-bottom: 30px;
+}
+.right3{
+   display: flex;
+   justify-content: space-between;
+}
+.right4{
+  padding-top: 20px;
+}
+
+.right2 > ul > li{ margin-top: 20px; font-size: 18px;}
