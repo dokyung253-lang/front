@@ -1,0 +1,28 @@
+
+/*===========================전체영역===========================*/
+#wrap{
+    width: 960px; 
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px #eeeeee;
+    padding: 50px; /*안쪽 여백*/
+}
+/*============================상단/입력영역========================*/
+#top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: 1px solid #eeeeee;
+    margin-bottom: 50px; padding: 50px 0px;
+}
+#top > input, #top > select { /* 선택자A, 선택자B */
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+}
+#top > button{
+    background-color: blue; color: white;
+    border: none; border-radius: 5px;
+    padding: 10px 20px;
+}
+/*===========================메인/테이블 영역===========================*/

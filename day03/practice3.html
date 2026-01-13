@@ -6,37 +6,44 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <style>
+    h4 {
+        margin: 0;     
+        padding: 0; 
+        display: inline; 
+    }
+</style>
 </head>
 <body>
-    <h1> 달력만들기 </h1> <dr />
-        <button type="button">  </button> <input type="year" /> <input type="month" /> <button type="button"> > </button><br />
-    <form>
-    <table border="7" style="border-collapse: collapse;"> <!--표(테이블)마크업, border="1": 테두리. style="border-collapse:collapse;": 테두리 한 줄-->
-        <tr> <!-- table row : 가로/행 추가 -->
-            <th> 
-            <td colspan="1"> 2023년 1월 </td>
-            </th>
-        </tr> <br />
-        <tr>
-            <td> <!--table data: 내용/셀 추가-->
-             데이터1(한칸/셀)
-            </td>
-            <td>
-            데이터2
-            </td>
+    <h1> 달력만들기 </h1> 
+    <div>
+        <button><</button> <input type="month" /> <button>></button>
+    </div>
+    
+    <table border="7" style="border-collapse: collapse;">
+        <tr> 
+            <th colspan="7"> 2023년 1월</th>
+        </tr>
+        <tr> 
+            <td><h4>일</h4> </td> <td><h4>월</h4></td> <td><h4>화</h4></td> 
+            <td><h4>수</h4></td> <td><h4>목</h4></td> <td><h4>금</h4></td> <td><h4>토</h4></td>  
         </tr>
         <tr>
-            <td colspan="2"> 데이터3(열 병합)</td> <!-- colspan="병합수": 열 병합-->
+            <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
         </tr>
         <tr>
-            <td rowspan="2"> 데이터4(행 병합)</td> <!-- rowspan="병합수": 행 병합-->
-            <td> 데이터5 </td>
+            <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
         </tr>
         <tr>
-            <td> 데이터6 </td>
+            <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
         </tr>
+        <tr>
+            <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+        </tr>
+        <tr>
+            <td>29</td><td>30</td><td>31</td>
+        </tr>
+        
     </table>
-    </form>
 </body>
 </html>
