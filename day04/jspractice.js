@@ -56,25 +56,23 @@ document.querySelector( "h2" ).innerHTML = 등급;
 //문제 7: 청년 할인 이벤트 대상 확인
 //나이를 prompt로 입력받아, 20대 (20세 이상 그리고 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 그렇지 않으면 "이벤트 대상이 아닙니다."를 콘솔에 출력하는 프로그램을 작성하시오.
 let age = prompt( "나이: " );
-age = 20 >= age && <= 29 ? "이벤트 대상입니다." : "이벤트 대상이 아닙니다."; 
-console.log(` 결과7 : ${ 대상자 }`);
+let 대상자 = 20 <= age && age <= 29 ? "이벤트 대상입니다." : "이벤트 대상이 아닙니다."; 
+console.log(` 결과7 : ${ 대상자 }`)
 
 //문제 8: '좋아요' 카운터 만들기
 //'좋아요' 수를 저장하는 likeCount 변수를 3으로 선언하고, 증감 연산자(++)를 사용하여 변수의 값을 1 증가시킨 뒤, "좋아요: [숫자]" 형식으로 새로운 '좋아요' 수를 콘솔에 출력하는 코드를 작성하시오.
-//let likeCount = 3;
-let likecount = 3; */
 let likecount = 3; // 좋아요 수 저장하는 변수
 console.log( ` 결과 8 : 좋아요수 : $( ++ likecount ) `); // 출력 *전*에 증가하므로 4 출력 
 console.log( ` 결과 8 : 좋아요수 : $( likecount++ ) ` ); // 출력 *후*에 증가하므로 3 출력 
 // ++likecount; // 세미콜론 기준으로 증감연산자가 유일하면 선위/후위 의미가 없다.
-console.log(` 결과 8 : 좋아요 수 : ${ ;likecount }`);
+console.log(` 결과 8 : 좋아요 수 : ${ likecount };`);
 
 //문제 9: 할 일 목록에 항목 추가하기
 //다음과 같이 할 일 목록이 담긴 todoList 배열이 있습니다. prompt를 사용하여 새로운 할 일을 입력받아 배열의 마지막에 추가한 후, 변경된 배열 전체를 콘솔에 출력하는 프로그램을 작성하시오.
 //초기 배열: let todoList = ['장보기', '과제하기'];
 //힌트: 배열에 요소를 추가할 때는 .push() 메소드를 사용합니다.
 let todoList = [ '장보기', '과제하기' ]; // 미리 문제에서 준비된 초기 배열
-let 할 일 = prompt(" 할 일 "); 
+let 할일 = prompt(" 할 일 "); 
 todoList.push( 할일 ); // 변수명.push.( 새로운 값 ); < 자료 추가 >
 console.log( `결과 9 : ${ todoList }`);
 
@@ -88,5 +86,5 @@ console.log( `결과 9 : ${ todoList }`);
 
 let waitingList = ['김민준', '이서연', '박도윤', '최지우'];
 // 배열의 길이는 1부터, 배열의 인덱스는 0부터, 배열명.length : 총길이 , 배열명.length-1 : 마지막 인덱스
-console.log( ` 결과 10 : 마지막 대기자는 ${waitingList[ waitingList.length-1 ] 입니다.}`)
+console.log( `결과10 : 마지막 대기자는 ${waitingList[waitingList.length-1 ]}입니다.`);
 
