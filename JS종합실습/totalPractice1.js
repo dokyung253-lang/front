@@ -56,13 +56,18 @@ const productAry = [
 // 1. 출력함수 : 어디에 무엇을 출력하는지?
 productPrint();  // js 열렸을 때 최초 1번 함수 실행
 function productPrint(){  // 함수 만들기, 함수명은 아무거나, ( ) 매개변수 없는상태. {} 함수 실행될 때 처리하는 코드
-    // 1. 어디에
-    const tbody = document.querySelector("tbody");
-    // 2. 무엇을
-    let html="";
-    console.log("현재 배열 상태:", productAry);
+    const tbody = document.querySelector("tbody");     // 1. 어디에
+    let html="";      // 2. 무엇을 + 배열 내 모든 객체들을 tr(행)구성하여 HTML만들기 + 반복문
        for( let index=0; index <= productAry.length-1; index++){
-        const product = productAry[index]; // index번쨰 제품(객체) 1개 호출
+            const product = productAry[index]; // index번쨰 제품(객체) 1개 호출
+            // ccode -> category 변경  : ccode의 category 배열에서 찾기
+        let category = "";
+        for( let index = 0; index <= categoryAry.length-1; index++ ){
+            if( product.ccode == categoryAry[index].ccode ){  // 만약에 제품의 카테고리 코드가 index번쨰 카테고리 코드와 같으면
+                category = categoryAry[index].category; // 찾은 카테고리명
+                break; // 반복문 종료
+            }
+        }
         html += `<tr>
                         <td><img src="${ product.image }" /></td>
                         <td>${ product.ccode }</td> <td>${ product.Name }</td>
@@ -73,12 +78,11 @@ function productPrint(){  // 함수 만들기, 함수명은 아무거나, ( ) �
                         </td>
                     </tr>`  // 반복(객체 개수) 횟수 만큼 tr(행) 생성
        } // for end
-   
     tbody.innerHTML=html;  // 3. 출력
 } // f end
 
 // 2. 삭제함수 : 해당하는 행의 <삭제> 버튼을 클릭하면 삭제(배열내 제거 = .splice() ) 처리
-function productDelete( pcode ){   console.log(pcode); // 매개변수로 삭제할 pcode 받았다. [삭제할 대상자]                                                         
+function productDelete( pcode ){ console.log(pcode); // 매개변수로 삭제할 pcode 받았다. [삭제할 대상자]                                                         
     for(let index = 0; index <= productAry.length-1; index++){ // 1. pcode의 배열내 인덱스 찾기
         if(pcode == productAry[index].pcode ){           // 2. 만약에 삭제할 pcode와 index번째 pcode가 같으면
             productAry.splice(index,1);                  // 3. 배열명.splixe(삭제할 인덱스, 개수);
@@ -106,45 +110,45 @@ function productUpdate( pcode ){
 function productAdd(){
     // 1. 입력받은 값들을 가져온다.
     const categoryDom = document.querySelector(".category");
-    const category = categoryDom.value;
+    const category = categoryDom.value;                        
 
     const nameDom = document.querySelector(".name");
-    const name = nameDom.value;
+    const name = nameDom.value;            
 
     const priceDom = document.querySelector(".price");
-    const price = priceDom.value;
+    const price = priceDom.value;                               
     
     const imageDom = document.querySelector(".image");
-    const image = imageDom.files[0]; // 업로드한 파일 중에서 첫번쨰 파일 호출;
-
+    const image = imageDom.files[0]; // 업로드한 파일 중에서 첫번쨰 파일 호출;  
+                                                                                                                
     // 유효성검사 1. 필요 없거나 잘못된 데이터 검증
     if( category == "disabled" ){ alert("카테고리를 선택하세요."); return; } // 함수 종료[저장실패]
 
     // 유효성검사 2. return 함수종료 : 아래 코드가 실행안됨.
     if(name ==""|| price =="" ){ alert("제품명과 가격은 필수입력입니다."); return; }
 
-// *********** new Date() 현재 시스템 날짜/시간 반환 ************
-const year = new Date().getFullYear(); // 년도
-const month = new Date().getMonth() + 1; // 월 (0부터 시작하므로 1 더함)
-const day = new Date().getDate(); // 일  // getday 현재요일 vs getDate 현재 일
-const date = `${year}-${month <10 ? "0"+month : month}-${day<10 ? "0"+day : day}`; // [날짜 두자릿수 만들기] 만약에 3월 ->  03월
+    // *********** new Date() 현재 시스템 날짜/시간 반환 ************
+    const year = new Date().getFullYear(); // 년도
+    const month = new Date().getMonth() + 1; // 월 (0부터 시작하므로 1 더함)
+    const day = new Date().getDate(); // 일  // getday 현재요일 vs getDate 현재 일
+    const date = `${year}-${month <10 ? "0"+month : month}-${day<10 ? "0"+day : day}`; // [날짜 두자릿수 만들기] 만약에 3월 ->  03월
 
-// **************p code는 자동으로 마지막객체의 pcode+1*************
-pcode += 1; // 다음 객체는 1증가한 식별코드를 갖는다.
+    // **************p code는 자동으로 마지막객체의 pcode+1*************
+    pcode += 1; // 다음 객체는 1증가한 식별코드를 갖는다.
 
-// 2. 입력받은 값과 식별코드+1, 현재날짜( new Date() )로 객체 구성한다.
-const obj = { 
+    // 2. 입력받은 값과 식별코드+1, 현재날짜( new Date() )로 객체 구성한다.
+    const obj = { 
     "pcode": pcode,
     // URL.createObjectURL(이미지객체) : 이미지객체를 http 주소로 변경
-    // 만약에 업로드 된 이미지가 존재하지 않으면 샘플이미지. 존재하면 이미지 출력
+    // 만약에 업로드 된 이미지가 존재하지 않으면 샘플이미지. 존재하면 이미지 출력 < 미리보기 가능 >
     "image": image == undefined  ? "https://placehold.co/100x100" : URL.createObjectURL(image),
     "ccode": category, 
     "name": name, 
     "price": price, 
     "date": date 
     };
-// 3. 구성한 객체를 배열에 저장한다.
-productAry.push(obj); // 배열명.push(추가할 객체) 속 .push는 추가하는 것
-// 4. 화면 새로고침 / 렌더링 한다.
-productPrint(); // 4. 화면 새로고침 / 렌더링 한다.
-} // f end
+    // 3. 구성한 객체를 배열에 저장한다.
+    productAry.push(obj); // 배열명.push(추가할 객체) 속 .push는 추가하는 것
+    // 4. 화면 새로고침 / 렌더링 한다.
+    productPrint(); // 4. 화면 새로고침 / 렌더링 한다.
+}

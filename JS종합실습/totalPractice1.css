@@ -49,4 +49,4 @@
 }
 #main > table .deleteBtn{ background-color: pink; color: red; }   
 #main > table .updateBtn{ background-color:skyblue; color: blue; }  
-#main > img{ width: 100px; height:100px; object-fit: cover; }/* object-fit: cover: 비율 유지, 잘림 없음*/
+#main > table img{ width: 100px; height:100px; object-fit: cover; }/* object-fit: cover: 비율 유지 & 잘림 발생가능*/
