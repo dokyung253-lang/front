@@ -22,9 +22,7 @@ const leaveAry = [
     { leaveCode: 2, memCode: 2, "start": "2024-07-21", "end": "2025-07-25", "reason": "여름휴가" }
 ];
 /* ===================== 기능/함수 설계 ===================== */
-
-
-// 1. 부서 출력 함수
+// [1] 등록함수: deptName을 입력받으면, tr 만들어서 Html의 #team > table안에 저장
 deptPrint();
 function deptPrint(){
     const teambody = document.querySelector("#teambody");
@@ -54,35 +52,4 @@ function Add() {
     input.value = "";
 }
 
-// 2. 사원 등록 함수
-let memCode = 5; 
-function memAdd(){
-    const deptDom = document.querySelector(".deptName");
-    const deptName = deptDom.value;   
-    
-    const memCode = document.querySelector(".memCode");
-    const memcode = memDom.value;                    
-
-    const nameDom = document.querySelector(".memName");
-    const name = nameDom.value;            
-
-    const positionDom = document.querySelector(".position");
-    const position = positionDom.value;                               
-    
-    const imageDom = document.querySelector(".image");
-    const image = imageDom.files[0];
-
-    if( deptName == "disabled" ){ alert("부서를 선택하세요."); return; }
-
-    if( name ==""|| position =="" ){ alert("이름과 직급은 필수입력입니다."); return; }
-    memCode += 1;
-    const obj = { 
-    "memCode": memCode,
-    "memName": name,
-    "position": position,
-    "image": image == undefined  ? "https://placehold.co/100x100" : URL.createObjectURL(image),
-    "deptCode": deptName, 
-    };
-    memberAry.push(obj); 
-    productPrint(); 
-}
+//[2] 출력함수 : 
