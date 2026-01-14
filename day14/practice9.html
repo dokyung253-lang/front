@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='practice9.css'>
+</head>
+
+<body>
+    <div id="wrap">
+        <h2> 인사 관리 대시보드 </h2>
+        <h6> 부서, 사원, 휴가 통합 관리 시스템 </h6>
+        <div id="wrap">
+            <div id="team">
+                <h2> 부서관리 </h2>
+                <input class="teamname" placeholder="신규 부서명 입력">
+                <button onclick="add()"> 추가 </button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> 부서명 </th>
+                            <th> 관리 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 개발팀 </td>
+                            <td>
+                                <button class="update"> 수정 </button>
+                                <button class="delete"> 삭제 </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 디자인팀 </td>
+                            <td>
+                                <button class="update"> 수정 </button>
+                                <button class="delete"> 삭제 </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 기획팀 </td>
+                            <td>
+                                <button class="update"> 수정 </button>
+                                <button class="delete"> 삭제 </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div id="member">
+                <div class="register">
+                    <h2> 사원 등록 </h2>
+                    <div class="side1">
+                        <div>
+                            <h5> 이름 </h5>
+                            <input class="membername">
+                        </div>
+                        <div>
+                            <h5> 직급 </h5>
+                            <input class="position">
+                        </div>
+                    </div>
+                    <div class="side2">
+                        <div class="team1">
+                            <h5> 부서 </h5>
+                            <select class="teamname">
+                                <option> 부서를 선택하세요 </option>
+                                <option> 개발팀 </option>
+                                <option> 디자인팀 </option>
+                                <option> 기획팀 </option>
+                            </select>
+                        </div>
+                        <div class="team2">
+                            <h5> 사진 </h5>
+                            <input class="img" type="file">
+                        </div>
+                    </div>
+
+                    <button> 등록 </button>
+                </div>
+                <div class="memberlist">
+                    <h2> 사원 전체 목록 </h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> 사진 </th>
+                                <th> 이름 </th>
+                                <th> 부서 </th>
+                                <th> 직급 </th>
+                                <th> 관리 </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://placehold.co/100x100"></td>
+                                <td> 김민준 </td>
+                                <td> 개발팀 </td>
+                                <td> 선임개발자 </td>
+                                <td>
+                                    <button class="update"> 수정 </button>
+                                    <button class="delete"> 삭제 </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://placehold.co/100x100"></td>
+                                <td> 이서연 </td>
+                                <td> 디자인팀 </td>
+                                <td> 수석 디자이너 </td>
+                                <td>
+                                    <button class="update"> 수정 </button>
+                                    <button class="delete"> 삭제 </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://placehold.co/100x100"></td>
+                                <td> 박도윤 </td>
+                                <td> 기획팀 </td>
+                                <td> 팀장 </td>
+                                <td>
+                                    <button class="update"> 수정 </button>
+                                    <button class="delete"> 삭제 </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://placehold.co/100x100"></td>
+                                <td> 유재석 </td>
+                                <td> 개발팀 </td>
+                                <td> 대리 </td>
+                                <td>
+                                    <button class="update"> 수정 </button>
+                                    <button class="delete"> 삭제 </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div id="dayoff">
+                <div class="dayoffreq">
+                    <h2> 사원 휴가 신청 </h2>
+                    <h5> 신청 사원 </h5>
+                    <select>
+                        <option> 휴가 신청 사원을 선택하세요 </option>
+                        <option> 김민준 </option>
+                        <option> 이서연 </option>
+                        <option> 박도윤 </option>
+                        <option> 유재석 </option>
+                    </select>
+                    <h5> 휴가 시작일</h5>
+                    <input type="date">
+                    <h5> 휴가 종료일 </h5>
+                    <input type="date">
+                    <h5> 휴가 사유 </h5>
+                    <input type="text" placeholder="예: 여름휴가">
+                    <button> 신청 </button>
+                </div>
+                <div class="dayofflist">
+                    <h2> 휴가 신청 전체 목록 </h2>
+                    <div class="minjun">
+                        <h5> 김민준 </h5><button> 신청취소</button>
+                        <p> 2025-08-04 ~ 2025-08-04 </p>
+                        <p> 사유: 병원 진료</p>
+                    </div>
+                    <div class="seoyeon">
+                        <span>
+                            <h5> 이서연 </h5><button> 신청취소</button>
+                        </span>
+                        <p> 2025-07-21 ~ 2025-07-25 </p>
+                        <p> 사유: 여름 휴가</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src='practice9.js'></script>
+</body>
+
+</html>

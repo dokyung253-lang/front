@@ -1,0 +1,29 @@
+// 1. 부서 출력 함수
+deptPrint();
+function deptPrint(){
+    const teambody = document.querySelector("#teambody");
+    let html="";
+      for( let index =0; index <= deptAry.length-1; index++){
+          const dept = deptAry[index];
+          const dName = dept.deptName;
+          const dCode = dept.deptCode;
+        
+        html += `<tr>
+                    <td> ${dName} </td>
+                    <td>
+                        <button onclick="deptUpdate('${dCode}')" class="updateBtn"> 수정 </button> 
+                        <button onclick="deptDelete('${dCode}')" class="deleteBtn"> 삭제 </button>
+                    </td>
+                </tr>`
+        } //for end
+        teambody.innerHTML=html;
+}
+function Add() {
+    const input = document.querySelector(".teamname");
+    deptAry.push({
+        deptCode: String(deptAry.length + 1),
+        deptName: input.value
+    });
+    deptPrint();
+    input.value = "";
+}

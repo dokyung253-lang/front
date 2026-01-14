@@ -22,23 +22,23 @@
 */
 
 // [1] 메모리 설계 , 표/테이블 = 배열, 표제목 = 속성명 , 행/가로 1개 = 객체1개, 기능(삭제/수정)은 메모리가 아니다.
-// 1. 저장한 데이터들을 객체 구성
+//    1. 저장한 데이터들을 객체 구성
 //{"image" : "https://placehold.co/600x400", "category": "1", "productName": "코카콜라", "price": 1000, "date": "2025-06-17"}
 
-// 2. 각 객체들 간의 식별 (구분=주민등록번호/사번/학번 등) 1개 이상 필요, 단] 중복이 없는 속성으로 선택!
+//    2. 각 객체들 간의 식별 (구분=주민등록번호/사번/학번 등) 1개 이상 필요, 단] 중복이 없는 속성으로 선택!
 // pcode : produce code,삭제 외 수정시 식별용도 사용
-//{ pno:"1", "image" : "https://placehold.co/600x400", "category": "1", "productName": "코카콜라", "price": 1000, "date": "2025-06-17"}
+//{ pcode:"1", "image" : "https://placehold.co/600x400", "ccode": "1", "productName": "코카콜라", "price": 1000, "date": "2025-06-17"}
 
-//3. 테이블간의 연관관계 구성
+//   3. 테이블간의 연관관계 구성
 // 카테고리 테이블과 제품 테이블간의 1:N 관계 구성, 제품테이블의 ccode 는 카테고리테이블의 ccode를 참조(교집합)한다.
 // { "ccode" : 1 , "category" : "음료" }
 // { "pcode" : 1 , "image" : "https://placehold.co/100x100" , "ccode" : 1 , "name" : "코카콜라" , "price" : 1000 , "date" : "2026-01-14" }
 
-//4. 객체가 다수일 떄는 배열 사용한다.
+//   4. 객체가 다수일 떄는 배열 사용한다.
 const categoryAry = [ {"ccode" : 1, "category" : "음료"}, {"ccode" : 2, "category" : "과자"} ];
 const productAry = [
-    {  pno:"1", "image" : "https://placehold.co/100x100", "category": "1", "Name": "코카콜라", "price": 1000, "date": "2025-06-17"},
-    {  pno:"2", "image" : "https://placehold.co/100x100", "category": "2", "Name": "새우깡", "price": 1200, "date": "2025-06-18"}
+    {  pcode:"1", "image" : "https://placehold.co/100x100", "ccode": "1", "Name": "코카콜라", "price": 1000, "date": "2025-06-17"},
+    {  pcode:"2", "image" : "https://placehold.co/100x100", "ccode": "2", "Name": "새우깡", "price": 1200, "date": "2025-06-18"}
 ];
 
     // [2] 기능/함수 설계
@@ -64,7 +64,7 @@ function productPrint(){  // 함수 만들기, 함수명은 아무거나, ( ) �
         let category = "";
         for( let index = 0; index <= categoryAry.length-1; index++ ){
             if( product.ccode == categoryAry[index].ccode ){  // 만약에 제품의 카테고리 코드가 index번쨰 카테고리 코드와 같으면
-                category = categoryAry[index].category; // 찾은 카테고리명
+                category = categoryAry[index].ccode; // 찾은 카테고리명
                 break; // 반복문 종료
             }
         }
@@ -106,7 +106,7 @@ function productUpdate( pcode ){
   }
 }
 // 4. 등록함수 : 입력받은 값들을 객체(묶어서) 구성하여 배열에 저장(.push())
-  let pcode = 1; // [전역변수] 처음에는 1로 가정하고 시작하되, 
+  let pcode = 3; // [전역변수] 처음에는 1로 가정하고 시작하되, 
 function productAdd(){
     // 1. 입력받은 값들을 가져온다.
     const categoryDom = document.querySelector(".category");
