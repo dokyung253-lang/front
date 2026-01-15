@@ -11,11 +11,11 @@
 
 <body>
     <div id="wrap">
-        <h2> 인사 관리 대시보드 </h2>
+        <h1> 인사 관리 대시보드 </h1>
         <h6> 부서, 사원, 휴가 통합 관리 시스템 </h6>
         <div id="wwrap">
             <div id="team">
-                <h2> 부서관리 </h2>
+                <h3> 부서관리 </h3>
                 <input class="teamname" placeholder="신규 부서명 입력">
                 <button class="add"> 추가 </button>
                 <table>
@@ -25,7 +25,7 @@
                             <th> 관리 </th>
                         </tr>
                     </thead>
-                    <tbody id ="teambody">
+                    <tbody>
                         <tr>
                             <td> 개발팀 </td>
                             <td>
@@ -54,7 +54,7 @@
 
             <div id="member">
                 <div class="register">
-                    <h2> 사원 등록 </h2>
+                    <h3> 사원 등록 </h3>
                     <div class="side1">
                         <div>
                             <h5> 이름 </h5>
@@ -68,7 +68,7 @@
                     <div class="side2">
                         <div class="team1">
                             <h5> 부서 </h5>
-                            <select class="teamname">
+                            <select class="teamselect">
                                 <option> 부서를 선택하세요 </option>
                                 <option> 개발팀 </option>
                                 <option> 디자인팀 </option>
@@ -84,7 +84,7 @@
                     <button> 등록 </button>
                 </div>
                 <div class="memberlist">
-                    <h2> 사원 전체 목록 </h2>
+                    <h3> 사원 전체 목록 </h3>
                     <table>
                         <thead>
                             <tr>
@@ -144,7 +144,7 @@
 
             <div id="dayoff">
                 <div class="dayoffreq">
-                    <h2> 사원 휴가 신청 </h2>
+                    <h3> 사원 휴가 신청 </h3>
                     <h5> 신청 사원 </h5>
                     <select>
                         <option> 휴가 신청 사원을 선택하세요 </option>
@@ -153,25 +153,33 @@
                         <option> 박도윤 </option>
                         <option> 유재석 </option>
                     </select>
-                    <h5> 휴가 시작일</h5>
-                    <input type="date">
-                    <h5> 휴가 종료일 </h5>
-                    <input type="date">
+                    <div class="dayoffreqdate">
+                        <div>
+                            <h5> 휴가 시작일</h5>
+                            <input type="date">
+                        </div>
+                        <div>
+                            <h5> 휴가 종료일 </h5>
+                            <input type="date">
+                        </div>
+                    </div>
                     <h5> 휴가 사유 </h5>
-                    <input type="text" placeholder="예: 여름휴가">
+                    <input class="blank" type="text" placeholder="예: 여름휴가">
                     <button> 신청 </button>
                 </div>
                 <div class="dayofflist">
-                    <h2> 휴가 신청 전체 목록 </h2>
-                    <div class="minjun">
-                        <h5> 김민준 </h5><button> 신청취소</button>
+                    <h3> 휴가 신청 전체 목록 </h3>
+                    <div class="mj">
+                        <div class="mj2">
+                            <h5> 김민준 </h5><button> 신청취소</button>
+                        </div>
                         <p> 2025-08-04 ~ 2025-08-04 </p>
                         <p> 사유: 병원 진료</p>
                     </div>
-                    <div class="seoyeon">
-                        <span>
+                    <div class="sy">
+                        <div class="sy2">
                             <h5> 이서연 </h5><button> 신청취소</button>
-                        </span>
+                        </div>
                         <p> 2025-07-21 ~ 2025-07-25 </p>
                         <p> 사유: 여름 휴가</p>
                     </div>

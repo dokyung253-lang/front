@@ -1,0 +1,125 @@
+#wrap{
+    margin: 0 auto;
+    width: 1280px;
+    background-color: lightgrey;
+}
+
+#wrap>h1, #wrap>h6{text-align: center;}
+
+#wwrap{
+    display: flex;
+    justify-content: center;
+}
+
+#team, #member, #dayoff{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#team, #dayoff{width: 250px;}
+
+.teamname, .membername, .position, .teamselect,
+.dayoffreq>select, .dayoffreq input, .dayoffreqdate input{
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+#team>h3, .register>h3, .memberlist>h3, .dayoffreq>h3, .dayofflist>h3{
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+}
+
+#team>.add{
+    background-color: darkviolet;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+#team>table, .memberlist>table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#team>table th, .memberlist>table th{
+    background-color: #eeeeee;
+    color: grey;
+    font-size: 13px;
+}
+#team>table td, .memberlist>table td{
+    padding: 5px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+}
+
+#team>table button, .memberlist>table button{
+    background-color: white;
+    border: none;
+}
+
+#team>table .update{
+    margin-left: 90px;
+}
+
+#team>table .update, .memberlist>table .update{color: blue; font-size: 12px;}
+#team>table .delete, .memberlist>table .delete{color: red; font-size: 12px;}
+
+.img{border: none;}
+
+#member{width: 550px;}
+
+.membername, .position {width: 230px;}
+.teamname {width: 160px;}
+.teamselect {width: 250px;}
+.blank{width: 220px;}
+
+.side1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.side2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.register>button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    margin-left: 480px;
+}
+
+.memberlist{
+    text-align: center;
+}
+
+.dayoffreqdate{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dayoffreq>select{width: 240px;}
+.dayoffreqdate input{width: 90px;}
+
+.dayoffreq>button{
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 185px;
+}
+
+.mj2, .sy2{
+    display: flex;
+}
