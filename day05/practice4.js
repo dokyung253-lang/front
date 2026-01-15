@@ -10,9 +10,9 @@ let fruitList = [ '사과', '바나나' ];
 let fruit = prompt(" 새로운 과일명 : ");
 if(fruitList.indexOf(fruit) !=-1){console.log( "이미 존재하는 과일입니다." );}
  else{
-    fruitList.push( fruit );
-    console.log( fruitList );
- }
+      fruitList.push( fruit );
+      console.log( fruitList );
+      }
 
 /*문제 2: 성별에 따른 색상 지정
 주민등록번호 13자리를 문자열로 입력받습니다. 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를, '2' 또는 '4'이면 'red'를 출력하는 프로그램을 작성하시오.*/
