@@ -162,8 +162,8 @@ for (let index = 0; index <= movieNames.length - 1; index++) {
     let rating = movieRatings[index]; // i 번째 평점 가져오기
 
     for (let r = 1; r <= 10; r++) {
-        if (rating >= r) { html += `<span> ● </span>` }
-        else { html += `<span> ○ </span>` }
+        if (rating >= r) { html += `<span> ★ </span>` }
+        else { html += `<span> ☆ </span>` }
     } // for end
 
     html += '</div>'
