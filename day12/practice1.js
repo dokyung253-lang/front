@@ -92,5 +92,5 @@ function printLocal() {
     console.log( globalText );   // 즉, 선언위치에 따른 {} 중괄호 안으로 들어가는 건 가능,
     console.log( localText );    // {} 중괄호 밖으로 나가는 건 불가능
 }
-console.log( globalText);
+console.log( globalText );
 // console.log( localText ); // [오류] localText is not defined

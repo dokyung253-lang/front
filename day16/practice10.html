@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen'>
+    <style>
+    .register> ul> li > input, .register > ul> button{border: 1px solid gray; border-radius: 5px;}
+    .login> ul> li > input, .login > ul> button{border: 1px solid gray; border-radius: 5px;}
+    </style>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div class="register">
+            <h3>회원가입 영역</h3>
+                아이디: <input class="signId"/><br/>
+                비밀번호: <input class="signPw"/><br/>
+                <button onclick="signup()" class="registerBtn">회원가입</button>
+        </div> 
+        <div class="login">
+            <h3>로그인 영역</h3>
+                아이디: <input class="loginId"/><br/>
+                비밀번호: <input class="loginPw"/><br/>
+                <button onclick="login()" class="loginBtn">로그인</button>
+        </div> 
+    </div>
+    <script src='practice10.js'></script>
+</body>
+</html>
