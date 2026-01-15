@@ -62,3 +62,4 @@ function 출력함수(){                                                    cons
     // 3. 출력 : 구성된 html 출력한다.
     테이블본문.innerHTML = 무엇을;                                                console.log(무엇을)
 }// f end
+

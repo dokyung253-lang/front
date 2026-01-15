@@ -17,15 +17,26 @@ const memberAry = [
 ];
 
 // 3. 휴가 신청 정보
-const leaveAry = [
-    { leaveCode: 1, memCode: 1, "start": "2024-08-04", "end": "2025-08-04", "reason": "병원진료" },
-    { leaveCode: 2, memCode: 2, "start": "2024-07-21", "end": "2025-07-25", "reason": "여름휴가" }
+const vacationAry = [
+    { vCode: 1, memCode: 1, "start": "2024-08-04", "end": "2025-08-04", "reason": "병원진료" },
+    { vCode: 2, memCode: 2, "start": "2024-07-21", "end": "2025-07-25", "reason": "여름휴가" }
 ];
 /* ===================== 기능/함수 설계 ===================== */
 
-
-// 1. 부서 출력 함수
+// 1. 부서(4)
+// 1) 부서 등록
+function Add() {
+    const input = document.querySelector(".teamname");
+    deptAry.push({
+        deptCode: String(deptAry.length + 1),
+        deptName: input.value
+    });
+    deptPrint();
+    input.value = "";
+}
+// 2) 부서 전체출력
 deptPrint();
+// 3) 부서 수정
 function deptPrint(){
     const teambody = document.querySelector("#teambody");
     let html="";
@@ -44,24 +55,18 @@ function deptPrint(){
         } //for end
         teambody.innerHTML=html;
 }
-function Add() {
-    const input = document.querySelector(".teamname");
-    deptAry.push({
-        deptCode: String(deptAry.length + 1),
-        deptName: input.value
-    });
-    deptPrint();
-    input.value = "";
-}
+// 4) 부서 삭제
 
-// 2. 사원 등록 함수
+
+// 2. 사원 (4)
+// 1) 사원 등록
 let memCode = 5; 
 function memAdd(){
     const deptDom = document.querySelector(".deptName");
     const deptName = deptDom.value;   
     
     const memCode = document.querySelector(".memCode");
-    const memcode = memDom.value;                    
+    const memcode = memCode.value;                    
 
     const nameDom = document.querySelector(".memName");
     const name = nameDom.value;            
@@ -86,3 +91,14 @@ function memAdd(){
     memberAry.push(obj); 
     productPrint(); 
 }
+// 2) 사원 전체출력
+// 3) 사원 수정
+// 4) 사원 삭제
+
+// 3. 휴가신청 (3)
+// 1) 휴가신청 등록
+// 2) 휴가신청 전체출력
+// 3) 휴가신청 삭제/취소
+
+// + select 현재 존재하는 부서명만 출력 +
+// + select 현재 존재하는 사원명만 출력 +
