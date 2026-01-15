@@ -14,7 +14,7 @@ function boardWrite(){
     
     //4. localStorage에서 배열 가져오기.
     let boardList= localStorage.getItem('boardList');
-    if( boardList==null){boardList=[]};
+    if( boardList==null){boardList=[]}
     else{boardList= JSON.parse(boardList);}
     
     //5. 객체를 배열에 저장
