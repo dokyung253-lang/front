@@ -6,7 +6,8 @@ h5 { color: orange; }
 *{ font-size: 20px ; } /* 글꼴크기 px(단위), 공통부분 css 처리 할 때 씀 */
 
 /* 2. 마크업 선택자 */
-h6{ font-size: 15px ; }
+h6{ font-size: 15px ; } 
+
 
 /* 3. 클래스 선택자 : 동일한 마크업들 간의 식별자 */
 .개그맨{ font-size : 10px ; }
